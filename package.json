@@ -1,0 +1,46 @@
+{
+  "name": "react-use-datepicker",
+  "version": "0.0.4",
+  "description": "A headless hook for building custom datepickers in react",
+  "main": "dist/index.cjs",
+  "typings": "dist/index.d.ts",
+  "module": "dist/index.esm.js",
+  "license": "MIT",
+  "files": [
+    "README.md",
+    "dist/"
+  ],
+  "type": "module",
+  "sideEffects": false,
+  "scripts": {
+    "prepublishOnly": "npm run build",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npm run clean && node scripts/build.js  && tsc --emitDeclarationOnly && cp package.json dist",
+    "clean": "npx rimraf ./dist"
+  },
+  "peerDependencies": {},
+  "devDependencies": {
+    "@types/node": "18.11.7",
+    "@types/react": "18.0.24",
+    "@types/react-dom": "18.0.8",
+    "date-fns": "^2.29.3",
+    "esbuild": "^0.15.13",
+    "eslint": "8.26.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "typescript": "4.8.4"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ajg102/useDatePicker.git"
+  },
+  "author": "Alex Glick",
+  "bugs": {
+    "url": "https://github.com/ajg102/useDatePicker/issues"
+  },
+  "homepage": "https://github.com/ajg102/useDatePicker#readme",
+  "dependencies": {
+    "date-fns": "2.29.3",
+    "client-only": "^0.0.1"
+  }
+}
